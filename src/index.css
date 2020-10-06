@@ -3,10 +3,79 @@ body {
   padding: 50;
 }
 
-div {
-  background-color: teal;
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50em;
+  padding: 1em;
+  background-color: rgb(245, 245, 245);
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+}
+.rolesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1em;
+}
+.rolesContainer label {
+  padding: 0.2em 1em;
+}
+.selector {
+  border: 3px rgb(245, 245, 245) solid;
+  margin: 0 1em;
+  padding: 0.2em 1em;
 }
 
-.app {
-  padding: 50px;
+.folders,
+.gems {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+}
+
+.folders label,
+.gems label {
+  padding: 0.2em 1em;
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.checkboxItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 1em;
+}
+
+.checkboxItem input :disabled + label::before {
+  background-color: #e9ecef;
+}
+.disabledLabel {
+  opacity: 0.3;
+}
+.buttonContainer {
+  display: flex;
+  padding: 1em 0;
+}
+.button {
+  display: flex;
+  padding: 0.7em 3em;
+  background-color: rgb(250, 107, 48);
+  text-align: center;
+  color: white;
+  border-color: rgb(250, 107, 48);
 }

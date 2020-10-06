@@ -5,7 +5,6 @@ import {roles} from '../utils/data';
 const RoleSelector = ({selectedRole, setSelectedRole}) => {
   const handleChange = (e) => {
     setSelectedRole(e.target.value);
-    console.log('onChange happened', e.target.value);
   };
   const handleSubmit = () => {
     console.log('Submit happened');

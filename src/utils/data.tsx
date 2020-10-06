@@ -4,17 +4,18 @@ export const roles = createEnum({
   admin: 'Admin',
   user: 'User',
   member: 'Member',
-  viewOnly: 'View - Only'
+  viewOnly: 'View - Only',
+  custom: 'Custom'
 });
 
-const roleRights = {
+export const roleRights = {
   admin: {create: true, update: true, move: true, delete: true, view: true, share: true},
   user: {create: true, update: true, move: false, delete: false, view: true, share: true},
   member: {create: false, update: false, move: false, delete: false, view: true, share: true},
-  viewOnly: {create: false, update: false, move: false, delete: false, view: true, share: false}
+  viewOnly: {create: false, update: false, move: false, delete: false, view: true, share: false},
 };
 
 export default Object.keys(roles).map((key) => ({
-  role: roles[key],
+  role: key,
   values: roleRights[key]
 }));

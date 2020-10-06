@@ -3,10 +3,14 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "module": "commonjs",
     "skipLibCheck": true,
     "sourceMap": false,
-    "target": "esnext"
+    "outDir": "./dist/",
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "jsx": "react",
+    "allowJs": true
   },
   "exclude": ["node_modules"],
   "include": ["src"]

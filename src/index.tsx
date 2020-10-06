@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 
 import styles from './index.css';
 
+import RoleSelector from './components/RoleSelector';
+import {roles} from './utils/data';
+
 const App = () => {
+  const [selectedRole, setSelectedRole] = useState('viewOnly');
+
   return (
     <div className={styles.app}>
-      <div>Welcome to my-webpack-react-starter</div>
+      <RoleSelector selectedRole={selectedRole} setSelectedRole={setSelectedRole} />
     </div>
   );
 };
